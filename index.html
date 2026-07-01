@@ -17,6 +17,23 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    
+        <!-- Link para o Manifesto do PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Configurações específicas para o iOS (iPhone) reconhecer como App -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Financeiro">
+
+    <script>
+      // Registra o Service Worker para permitir funcionamento offline
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+          .then(() => console.log('Service Worker Registrado!'))
+          .catch(err => console.log('Erro ao registrar:', err));
+      }
+    </script>             
 
 </head>
 
