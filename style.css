@@ -721,30 +721,43 @@ label{
 
     background:#252b36;
 
+    border:none;
+
+    border-radius:12px;
+
     color:white;
-
-    border-radius:16px;
-
-    padding:18px 10px;
 
     display:flex;
 
     flex-direction:column;
 
     justify-content:center;
+
     align-items:center;
 
-    gap:10px;
+    gap:4px;
 
-    font-size:1.35rem;
+    padding:10px 6px;
 
-    min-height:85px;
+    min-height:68px;
+
+    font-size:.82rem;
 
 }
 
-.categoria-btn span{
+.categoria-btn .icone{
 
-    font-size:.88rem;
+    font-size:1.3rem;
+
+}
+
+.categoria-btn .texto{
+
+    font-size:.75rem;
+
+    text-align:center;
+
+    line-height:1.1;
 
 }
 
@@ -975,7 +988,7 @@ label{
 
     .grade-categorias{
 
-    grid-template-columns:1fr;
+    grid-template-columns: repeat(2, 1fr);
 
     gap:10px;
 
@@ -1066,9 +1079,11 @@ label{
 
     .grade-categorias{
 
-        grid-template-columns:1fr;
+    grid-template-columns:repeat(3,1fr);
 
-    }
+    gap:8px;
+
+}
 
 }
 

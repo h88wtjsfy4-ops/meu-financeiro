@@ -56,7 +56,8 @@ const categorias = {
     Investimentos:0,
     Parcelamentos:0,
     Assinaturas:0,
-    Lazer:0
+    Lazer:0,
+    Outros:0
 
 };
 
@@ -199,7 +200,8 @@ function criarGrafico() {
                 "Investimentos",
                 "Parcelamentos",
                 "Assinaturas",
-                "Lazer"
+                "Lazer",
+                "Outros",
 
             ],
 
@@ -215,7 +217,8 @@ function criarGrafico() {
                     categorias.Investimentos,
                     categorias.Parcelamentos,
                     categorias.Assinaturas,
-                    categorias.Lazer
+                    categorias.Lazer,
+                    categorias.Outros,
 
                 ],
 
@@ -229,7 +232,8 @@ function criarGrafico() {
                     "#8e44ad",
                     "#8d6e63",
                     "#ec6cff",
-                    "#ff9800"
+                    "#ff9800",
+                    "#607D8B"
 
                 ],
 
@@ -309,7 +313,9 @@ function atualizarGrafico(){
 
         categorias.Assinaturas,
 
-        categorias.Lazer
+        categorias.Lazer,
+
+        categorias.Outros
 
     ];
 
@@ -354,6 +360,9 @@ function atualizarTela(){
 
     document.getElementById("lazer").textContent=
     dinheiro(categorias.Lazer);
+
+    document.getElementById("outros").textContent =
+    dinheiro(categorias.Outros);
 
     contadorMovimentos.textContent=
     movimentos.length+" registros";
@@ -791,6 +800,7 @@ confirmarReset.addEventListener("click",()=>{
     categorias.Parcelamentos=0;
     categorias.Assinaturas=0;
     categorias.Lazer=0;
+    categorias.Outros = 0;
 
     limparCampos();
 
