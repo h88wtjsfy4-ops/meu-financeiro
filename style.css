@@ -1,0 +1,1109 @@
+/* =======================================================
+   RESET
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#15181f;
+    color:#ffffff;
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+
+    padding:40px 20px;
+
+}
+
+/* =======================================================
+   CONTAINER
+======================================================= */
+
+.container{
+
+    width:100%;
+    max-width:900px;
+
+}
+
+/* =======================================================
+   CABEÇALHO
+======================================================= */
+
+.topo{
+
+    margin-bottom:25px;
+
+}
+
+.topo h1{
+
+    font-size:2.1rem;
+    font-weight:700;
+
+}
+
+.topo p{
+
+    margin-top:5px;
+
+    color:#9fa6b2;
+
+    font-size:.95rem;
+
+}
+
+/* =======================================================
+   CARDS
+======================================================= */
+
+.card{
+
+    background:#1d212b;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-bottom:22px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+
+}
+
+.card h3{
+
+    margin-bottom:18px;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+}
+
+/* =======================================================
+   CARD DO SALDO
+======================================================= */
+
+.saldo-card{
+
+    text-align:center;
+
+}
+
+.titulo-card{
+
+    display:block;
+
+    color:#aab3c3;
+
+    font-size:.95rem;
+
+    margin-bottom:12px;
+
+}
+
+#saldoAtual{
+
+    font-size:2.8rem;
+
+    font-weight:700;
+
+    color:#48d597;
+
+    margin-bottom:25px;
+
+}
+
+/* =======================================================
+   ENTRADAS E SAÍDAS
+======================================================= */
+
+.resumo-financeiro{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.entrada-box,
+.saida-box{
+
+    border-radius:16px;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+.entrada-box{
+
+    background:#173b3a;
+
+}
+
+.saida-box{
+
+    background:#42261f;
+
+}
+
+.entrada-box span,
+.saida-box span{
+
+    display:block;
+
+    color:#d5d5d5;
+
+    font-size:.9rem;
+
+    margin-bottom:8px;
+
+}
+
+.entrada-box strong{
+
+    color:#39e6b5;
+
+    font-size:1.3rem;
+
+}
+
+.saida-box strong{
+
+    color:#ff9b6d;
+
+    font-size:1.3rem;
+
+}
+
+/* =======================================================
+   BOTÕES GERAIS
+======================================================= */
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+/* =======================================================
+   INPUTS
+======================================================= */
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:8px;
+
+    margin-bottom:16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#2a3040;
+
+    color:#fff;
+
+    font-size:1rem;
+
+}
+
+input::placeholder{
+
+    color:#9098aa;
+
+}
+
+/* =======================================================
+   LABELS
+======================================================= */
+
+label{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:#d8d8d8;
+
+    font-size:.95rem;
+
+}
+/* =======================================================
+   GRÁFICO
+======================================================= */
+
+.grafico-container{
+
+    width:100%;
+    height:420px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+}
+
+#graficoPizza{
+
+    max-width:420px;
+    max-height:420px;
+
+}
+
+/* =======================================================
+   CATEGORIAS
+======================================================= */
+
+.categorias{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:15px;
+
+}
+
+.categoria{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#252b36;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    transition:.25s;
+
+}
+
+.categoria:hover{
+
+    background:#2d3441;
+
+    transform:translateX(5px);
+
+}
+
+.categoria span{
+
+    color:#ececec;
+
+    font-size:.97rem;
+
+}
+
+.categoria strong{
+
+    color:#5ce6ad;
+
+    font-size:1rem;
+
+}
+
+.saldo-restante{
+
+    margin-top:8px;
+
+    background:#173b3a;
+
+    border:1px solid rgba(72,213,151,.35);
+
+}
+
+.saldo-restante strong{
+
+    color:#48d597;
+
+    font-size:1.08rem;
+
+}
+
+/* =======================================================
+   BOTÕES PRINCIPAIS
+======================================================= */
+
+.acoes{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.btn{
+
+    padding:18px;
+
+    border-radius:16px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+.entrada{
+
+    background:#00b8d9;
+
+}
+
+.entrada:hover{
+
+    background:#00c8ec;
+
+}
+
+.saida{
+
+    background:#ff7a2f;
+
+}
+
+.saida:hover{
+
+    background:#ff8c47;
+
+}
+
+/* =======================================================
+   BOTÃO RESET
+======================================================= */
+
+.reset-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:30px 0;
+
+}
+
+#btnReset{
+
+    background:#323844;
+
+    color:white;
+
+    padding:14px 26px;
+
+    border-radius:14px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+#btnReset:hover{
+
+    background:#404756;
+
+}
+
+/* =======================================================
+   SCROLLBAR
+======================================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#181c23;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#4a5365;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5f6a7f;
+
+}
+/* =======================================================
+   HISTÓRICO
+======================================================= */
+
+.historico-topo{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+#contadorMovimentos{
+
+    color:#8b94a6;
+    font-size:.9rem;
+
+}
+
+#historico{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.movimento{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#252b36;
+
+    border-radius:15px;
+
+    padding:16px 18px;
+
+    transition:.25s;
+
+}
+
+.movimento:hover{
+
+    background:#2d3441;
+
+}
+
+.movimento-esquerda{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.movimento-titulo{
+
+    font-weight:600;
+
+    color:#fff;
+
+}
+
+.movimento-data{
+
+    font-size:.82rem;
+
+    color:#9ca5b8;
+
+}
+
+.movimento-direita{
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:6px;
+
+}
+
+.valor-entrada{
+
+    color:#48d597;
+
+    font-weight:600;
+
+}
+
+.valor-saida{
+
+    color:#ff8b68;
+
+    font-weight:600;
+
+}
+
+.excluir{
+
+    background:none;
+
+    color:#c2c7d2;
+
+    font-size:.82rem;
+
+    padding:0;
+
+}
+
+.excluir:hover{
+
+    color:#ff5e5e;
+
+    transform:none;
+
+}
+
+/* =======================================================
+   MODAIS
+======================================================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:999;
+
+    backdrop-filter:blur(5px);
+
+}
+
+.oculto{
+
+    display:none;
+
+}
+
+.modal-content{
+
+    width:100%;
+    max-width:480px;
+
+    background:#1d212b;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.45);
+
+    animation:abrirModal .25s ease;
+
+}
+
+.modal-content.pequeno{
+
+    max-width:420px;
+
+}
+
+.modal-content h2{
+
+    margin-bottom:10px;
+
+}
+
+.modal-subtitulo{
+
+    color:#9ea8bb;
+
+    margin-bottom:20px;
+
+}
+
+.modal-content label{
+
+    display:block;
+
+    margin-top:18px;
+
+}
+
+.modal-content input{
+
+    margin-top:10px;
+
+}
+
+/* =======================================================
+   CATEGORIAS DO MODAL
+======================================================= */
+
+.grade-categorias{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+    margin:25px 0;
+
+}
+
+.categoria-btn{
+
+    background:#252b36;
+
+    color:white;
+
+    border-radius:16px;
+
+    padding:18px 10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:10px;
+
+    font-size:1.6rem;
+
+}
+
+.categoria-btn span{
+
+    font-size:.88rem;
+
+}
+
+.categoria-btn:hover{
+
+    background:#00b8d9;
+
+}
+
+.categoria-btn.ativa{
+
+    background:#00b8d9;
+
+}
+
+/* =======================================================
+   BOTÕES DOS MODAIS
+======================================================= */
+
+.modal-botoes{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:30px;
+
+}
+
+.modal-botoes button{
+
+    padding:13px 24px;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.cancelar{
+
+    background:#404859;
+
+}
+
+.cancelar:hover{
+
+    background:#4c5568;
+
+}
+
+#salvarEntrada,
+#salvarSaida{
+
+    background:#00b8d9;
+
+}
+
+#salvarEntrada:hover,
+#salvarSaida:hover{
+
+    background:#00c8ec;
+
+}
+
+.perigo{
+
+    background:#e34b4b;
+
+}
+
+.perigo:hover{
+
+    background:#ff5f5f;
+
+}
+
+.aviso{
+
+    color:#ff9d6d;
+
+    margin-top:10px;
+
+}
+/* =======================================================
+   TOAST
+======================================================= */
+
+#toast{
+
+    position:fixed;
+
+    left:50%;
+    bottom:35px;
+
+    transform:translateX(-50%) translateY(120px);
+
+    background:#1d212b;
+
+    color:#ffffff;
+
+    padding:16px 28px;
+
+    border-radius:15px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    z-index:2000;
+
+}
+
+#toast.mostrar{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+/* =======================================================
+   ANIMAÇÕES
+======================================================= */
+
+@keyframes abrirModal{
+
+    from{
+
+        opacity:0;
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.card{
+
+    animation:aparecer .45s ease;
+
+}
+
+/* =======================================================
+   RESPONSIVIDADE
+======================================================= */
+
+@media(max-width:900px){
+
+    body{
+
+        padding:20px 14px;
+
+    }
+
+    .grafico-container{
+
+        height:360px;
+
+    }
+
+    #graficoPizza{
+
+        max-width:330px;
+        max-height:330px;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .topo h1{
+
+        font-size:1.8rem;
+
+    }
+
+    #saldoAtual{
+
+        font-size:2.3rem;
+
+    }
+
+    .resumo-financeiro{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .acoes{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .grade-categorias{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    body{
+
+        padding:12px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+    .grafico-container{
+
+        height:290px;
+
+    }
+
+    #graficoPizza{
+
+        max-width:250px;
+        max-height:250px;
+
+    }
+
+    .categoria{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:6px;
+
+    }
+
+    .historico-topo{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+    .movimento{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
+
+    }
+
+    .movimento-direita{
+
+        align-items:flex-start;
+
+    }
+
+    .modal-content{
+
+        padding:22px;
+
+    }
+
+    .modal-botoes{
+
+        flex-direction:column;
+
+    }
+
+    .modal-botoes button{
+
+        width:100%;
+
+    }
+
+    .grade-categorias{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* =======================================================
+   FOCO DOS BOTÕES
+======================================================= */
+
+button:focus{
+
+    outline:none;
+
+}
+
+button:focus-visible{
+
+    outline:2px solid #00b8d9;
+
+    outline-offset:4px;
+
+}
+
+/* =======================================================
+   SELEÇÃO DE TEXTO
+======================================================= */
+
+::selection{
+
+    background:#00b8d9;
+
+    color:#ffffff;
+
+}
+
+/* =======================================================
+   TRANSIÇÕES GERAIS
+======================================================= */
+
+.card,
+.btn,
+.categoria,
+.categoria-btn,
+#btnReset,
+.modal-content,
+.movimento{
+
+    transition:all .25s ease;
+
+}

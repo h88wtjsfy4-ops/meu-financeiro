@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Financeiro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- ========================= -->
+        <!-- CABEÇALHO -->
+        <!-- ========================= -->
+
+        <header class="topo">
+
+            <div>
+
+                <h1>💰 Meu Financeiro</h1>
+
+                <p id="mesAtual">
+                    Julho de 2026
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- ========================= -->
+        <!-- CARD SALDO -->
+        <!-- ========================= -->
+
+        <section class="card saldo-card">
+
+            <span class="titulo-card">
+                Saldo Atual
+            </span>
+
+            <h2 id="saldoAtual">
+                R$ 0,00
+            </h2>
+
+            <div class="resumo-financeiro">
+
+                <div class="entrada-box">
+
+                    <span>Entradas</span>
+
+                    <strong id="totalEntradas">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+                <div class="saida-box">
+
+                    <span>Saídas</span>
+
+                    <strong id="totalSaidas">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- GRÁFICO -->
+        <!-- ========================= -->
+
+        <section class="card">
+
+            <h3>
+                Distribuição dos Gastos
+            </h3>
+
+            <div class="grafico-container">
+
+                <canvas id="graficoPizza"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- CATEGORIAS -->
+        <!-- ========================= -->
+
+        <section class="card">
+
+            <h3>
+                Gastos por Categoria
+            </h3>
+
+            <div class="categorias">
+
+                <div class="categoria">
+                    <span>🛒 Mercado</span>
+                    <strong id="mercado">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria">
+                    <span>🥖 Padaria</span>
+                    <strong id="padaria">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria">
+                    <span>🍔 iFood</span>
+                    <strong id="ifood">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria">
+                    <span>🚕 Uber</span>
+                    <strong id="uber">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria">
+                    <span>📈 Investimentos</span>
+                    <strong id="investimentos">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria">
+                    <span>💳 Parcelamentos</span>
+                    <strong id="parcelamentos">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria">
+                    <span>📺 Assinaturas</span>
+                    <strong id="assinaturas">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria">
+                    <span>🎮 Lazer</span>
+                    <strong id="lazer">R$ 0,00</strong>
+                </div>
+
+                <div class="categoria saldo-restante">
+
+                    <span>
+                        💰 Saldo Restante
+                    </span>
+
+                    <strong id="saldoRestante">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- BOTÕES -->
+        <!-- ========================= -->
+
+        <section class="acoes">
+
+            <button id="btnEntrada" class="btn entrada">
+
+                ➕ Entrada
+
+            </button>
+
+            <button id="btnSaida" class="btn saida">
+
+                ➖ Saída
+
+            </button>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- HISTÓRICO -->
+        <!-- ========================= -->
+
+        <section class="card">
+
+            <div class="historico-topo">
+
+                <h3>
+                    Últimas movimentações
+                </h3>
+
+                <span id="contadorMovimentos">
+                    0 registros
+                </span>
+
+            </div>
+
+            <div id="historico">
+
+                <!-- O JavaScript criará os registros aqui -->
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- RESET -->
+        <!-- ========================= -->
+
+        <section class="reset-container">
+
+            <button id="btnReset">
+
+                🔄 Resetar mês
+
+            </button>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- MODAL ENTRADA -->
+        <!-- ========================= -->
+
+        <div class="modal oculto" id="modalEntrada">
+
+            <div class="modal-content">
+
+                <h2>
+                    Nova Entrada
+                </h2>
+
+                <label>
+
+                    Descrição
+
+                    <input
+                        type="text"
+                        id="descricaoEntrada"
+                        placeholder="Ex: Salário">
+
+                </label>
+
+                <label>
+
+                    Valor
+
+                    <input
+                        type="number"
+                        id="valorEntrada"
+                        placeholder="0,00"
+                        step="0.01">
+
+                </label>
+
+                <div class="modal-botoes">
+
+                    <button class="cancelar">
+
+                        Cancelar
+
+                    </button>
+
+                    <button id="salvarEntrada">
+
+                        Salvar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- MODAL SAÍDA -->
+        <!-- Continua na Parte 2 -->        <!-- ========================= -->
+        <!-- MODAL SAÍDA -->
+        <!-- ========================= -->
+
+        <div class="modal oculto" id="modalSaida">
+
+            <div class="modal-content">
+
+                <h2>Nova Saída</h2>
+
+                <p class="modal-subtitulo">
+                    Escolha a categoria
+                </p>
+
+                <div class="grade-categorias">
+
+                    <button class="categoria-btn" data-categoria="Mercado">
+                        🛒
+                        <span>Mercado</span>
+                    </button>
+
+                    <button class="categoria-btn" data-categoria="Padaria">
+                        🥖
+                        <span>Padaria</span>
+                    </button>
+
+                    <button class="categoria-btn" data-categoria="iFood">
+                        🍔
+                        <span>iFood</span>
+                    </button>
+
+                    <button class="categoria-btn" data-categoria="Uber">
+                        🚕
+                        <span>Uber</span>
+                    </button>
+
+                    <button class="categoria-btn" data-categoria="Investimentos">
+                        📈
+                        <span>Investimentos</span>
+                    </button>
+
+                    <button class="categoria-btn" data-categoria="Parcelamentos">
+                        💳
+                        <span>Parcelamentos</span>
+                    </button>
+
+                    <button class="categoria-btn" data-categoria="Assinaturas">
+                        📺
+                        <span>Assinaturas</span>
+                    </button>
+
+                    <button class="categoria-btn" data-categoria="Lazer">
+                        🎮
+                        <span>Lazer</span>
+                    </button>
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="categoriaSelecionada">
+
+                <label>
+
+                    Valor
+
+                    <input
+                        type="number"
+                        id="valorSaida"
+                        placeholder="0,00"
+                        step="0.01">
+
+                </label>
+
+                <div class="modal-botoes">
+
+                    <button class="cancelar">
+
+                        Cancelar
+
+                    </button>
+
+                    <button id="salvarSaida">
+
+                        Salvar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- MODAL RESET -->
+        <!-- ========================= -->
+
+        <div class="modal oculto" id="modalReset">
+
+            <div class="modal-content pequeno">
+
+                <h2>Resetar o mês?</h2>
+
+                <p>
+                    Todos os registros, categorias, gráfico e saldo serão
+                    reiniciados.
+                </p>
+
+                <p class="aviso">
+                    Esta ação não poderá ser desfeita.
+                </p>
+
+                <div class="modal-botoes">
+
+                    <button id="cancelarReset">
+
+                        Cancelar
+
+                    </button>
+
+                    <button id="confirmarReset"
+                        class="perigo">
+
+                        Resetar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- TOAST -->
+        <!-- ========================= -->
+
+        <div id="toast">
+
+            <span id="toastMensagem">
+                Operação realizada com sucesso.
+            </span>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
