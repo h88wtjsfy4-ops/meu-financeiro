@@ -648,6 +648,12 @@ label{
     width:100%;
     max-width:480px;
 
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    -webkit-overflow-scrolling:touch;
+
     background:#1d212b;
 
     border-radius:22px;
@@ -730,7 +736,9 @@ label{
 
     gap:10px;
 
-    font-size:1.6rem;
+    font-size:1.35rem;
+
+    min-height:85px;
 
 }
 
@@ -916,7 +924,7 @@ label{
    RESPONSIVIDADE
 ======================================================= */
 
-@media(max-width:900px){
+@media(max-width:500px){
 
     body{
 
@@ -967,7 +975,9 @@ label{
 
     .grade-categorias{
 
-        grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
+
+    gap:10px;
 
     }
 
